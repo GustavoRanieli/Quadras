@@ -14,5 +14,10 @@ function teste(position){
     L.marker([position.coords.latitude, position.coords.longitude], 13).addTo(map)
         .bindPopup('Teste de Pop')
         .openPopup();
+    
+    L.Control.geocoder({
+        suggestTimeout: 0,
+        errorMessage: "Erro ao encontrar"
+    }).addTo(map)
 }
 

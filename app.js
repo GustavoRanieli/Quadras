@@ -5,7 +5,9 @@ env.config()
 
 app.set('view engine', 'ejs')
 app.set('views', './public/view')
+
 app.use('/public/script', express.static('./public/script'))
+app.use('/public/style', express.static('./public/style'))
 
 app.get('/', ( req, res ) =>{
     res.render('index')
